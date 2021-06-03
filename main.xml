@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="700px"
+    android:orientation="vertical" >
+ 
+    <Button
+        android:id="@+id/buttonUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="جدول البدائل" />
+        
+       <Button
+        android:id="@+id/buttonUrl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="موقع الكلية" />    
+        
+       
+<WebView  
+    android:id="@+id/webView2"
+    android:layout_width="match_parent"
+    android:layout_height="600px"
+android:scaleType="fitXY"/>
+
+/>  
+        
+     <ImageView
+    android:id="@+id/imageView1"
+    android:layout_margin="20dp"
+    android:src="@drawable/i" 
+    android:layout_width="50dp"
+    android:layout_height="50dp"/>     
+            
+</LinearLayout>
