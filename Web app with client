@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="surgery.med.gezira"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="25" />
+<uses-permission android:name="android.permission.INTERNET"/> 
+	 
+	 
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="surgery.med.gezira.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?> 
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	    xmlns:app="http://schemas.android.com/apk/res-auto" 
+	    xmlns:tools="http://schemas.android.com/tools" 
+	    android:layout_width="match_parent" 
+	    android:layout_height="match_parent" 
+	    tools:context=".MainActivity"> 
+	     <WebView 
+	        android:id="@+id/web_view" 
+	        android:layout_width="match_parent" 
+	        android:layout_height="match_parent"/> 	
+</RelativeLayout>
+
+
+
+
+
+
+package surgery.med.gezira;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button; 
+	public class MainActivity extends Activity { 
+	    WebView webView; 
+	    
+	 Button button1,button2,button3; 
+   
+	        @Override 
+	    protected void onCreate(Bundle savedInstanceState) { 
+	        super.onCreate(savedInstanceState); 
+	        setContentView(R.layout.activity_main); 
+	        webView = findViewById(R.id.web_view); 
+	        
+	       
+        webView.setWebViewClient(new WebViewClient()); 
+        webView.loadUrl("https://geziracollegesudan.com/Staff_registration/Staff_registration/indexorigin1.php?id=2"); 
+	 
+	        WebSettings webSettings=webView.getSettings(); 
+	        webSettings.setJavaScriptEnabled(true); 
+	    } 
+	} 	 
+	 
+	 
